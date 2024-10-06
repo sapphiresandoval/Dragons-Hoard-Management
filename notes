@@ -1,0 +1,35 @@
+My MVP will just be adding games, with an update and delete function. The adding of sessions will be streach goals. i am aware that the sessions schema would be a lot, but this is something id want to work on past my personal project. 
+
+Name: Sapphire Sandoval 
+
+Stack: Javascript
+
+Github Repo: https://github.com/sapphiresandoval/Dragons-Hoard-Management
+    *Still private, but will be public when submitted. 
+
+Project Name: Dragon's Hoard Management
+
+Description: 
+    A DND game master managemnet app, where you can store all the info you need for each game (and session). managing and tracking health of players and enemies, session notes etc. 
+
+Features:
+
+    Basic MVP:
+        login/reg
+        multiple games (and possibly sessions within that.)
+        enemy generator (for turn order)
+        player stats (health and general info)
+        note place for each session
+
+    If time allows/ eventually: 
+        picture uploads for characters, and games. 
+        calander feature (with moon generator)
+        deployment
+        eventually want to add stores and inventory lists
+
+Notes: 
+    plan to use Tailwind, possibly Sass/Cless.
+    full crud- will be for each game and possibly sessions.
+    have login validations and protected routes. 
+
+
