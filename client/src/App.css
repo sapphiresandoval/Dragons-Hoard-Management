@@ -1,0 +1,89 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+}
+.navLinks {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+}
+  .navLinks a, p {
+    text-decoration: none;
+    color: black;
+  }
+  .navLinks li {
+    background-color: cadetblue;
+    border-radius: 10%;
+    padding: 2px;
+    margin-top: 5px;
+  }
+
+
+.content {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white
+}
+
+.content p {
+  color: white;
+}
+
+.allContent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.allContent p {
+  color: white;
+}
+
+.displayBox{
+  border: 5px solid blueviolet;
+  margin: 5px;
+  padding: 5px;
+  width: 300px;
+  color: white;
+}
+
+.title {
+  flex-direction: row;
+}
+
+button {
+  background-color: teal;
+  color: black;
+  border: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 10%;
+}
+
+.errorMessage {
+  color: red;
+}
