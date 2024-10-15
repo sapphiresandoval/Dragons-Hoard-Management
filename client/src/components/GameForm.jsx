@@ -7,7 +7,7 @@ const GameForm = (props) => {
     const {user, setUser} = useContext(userContext)
     const navigate = useNavigate()
     const [gameErrors, setGameErrors] = useState({})
-    const {game, setGame} = useState({
+    const [game, setGame] = useState({
         gameName: '',
         world: '',
         description: ''

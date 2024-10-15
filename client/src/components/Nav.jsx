@@ -1,17 +1,17 @@
 import React, {useContext, useState} from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import { logout } from '../services/user.services';
 import { userContext } from '../context/userContext';
+import axios from 'axios';
+
 
 const Nav = (props) => {
     const {user, setUser} = useContext(userContext)
     const navigate = useNavigate()
 
     const location = useLocation()
-    console.log(location)
 
     const logoutUser = () => {
-        logout()
+        axios.post(`http://localhost:8004/api/user/logout`, {withCredentials: true})
             .then(() => {navigate('/')})
             .catch(err => {console.log(err)})
     }

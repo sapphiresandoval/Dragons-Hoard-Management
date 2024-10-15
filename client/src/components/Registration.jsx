@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
 import {Link, useNavigate} from 'react-router-dom'
 import {userContext} from '../context/userContext'
-import { register } from '../services/user.services';
+import axios from 'axios';
 
 const Registration = (props) => {
     const {user, setUser} = useContext(userContext)

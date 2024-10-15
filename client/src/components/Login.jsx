@@ -55,6 +55,7 @@ const Login = (props) => {
                 {userErrors.password}
                 <input type="submit" value="Login" />
             </form>
+            <Link to={'/register'}>Need to register?</Link>
         </div>
 )}
 

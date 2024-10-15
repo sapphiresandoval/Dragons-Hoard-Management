@@ -53,7 +53,7 @@ const GameController = {
                     gameName: req.body.gameName,
                     world: req.body.world,
                     description: req.body.description,
-                    $push: {userId : req.body.userId}
+                    $set: {userId : req.body.userId}
                 },
                 options)
             return res.status(202).json(updatedGame)

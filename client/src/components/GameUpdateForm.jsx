@@ -26,13 +26,13 @@ const GameUpdateForm = (props) => {
 
     const submitHandler = e => {
         e.preventDefault()
+        
         axios.put(`http://localhost:8004/api/games/${game._id}`, game, {withCredentials: true})
             .then(() => navigate('/home'))
             .catch(err => {setGameErrors(err.response.data)
                 console.log(err.response.data)
             })
     }
-
     return (
         <div>
             <form onSubmit={submitHandler}>

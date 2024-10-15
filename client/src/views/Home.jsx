@@ -13,12 +13,13 @@ const Home = (props) => {
             .catch(err => console.log(err))
     }, [])
 
-    const userGames = allGames.filter(game => game.userId === user._id);
-
     const deleteGame = (id) => {
         axios.delete(`http://localhost:8004/api/games/${id}`, {withCredentials: true})
             .then(() => setAllGames(prev => prev.filter( game => id != game._id)))
     }
+
+    const userGames = allGames.map(game => game.userId._id == user._id ? game : null).filter(game => game)
+    
 
     return (
         <div className='allContent'>
