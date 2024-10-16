@@ -31,7 +31,7 @@ const Home = (props) => {
                                 <Link to={`/game/${game._id}`}>{game.gameName}</Link>
                             </h3>
                             <p>World: {game.world}</p>
-                            <p>Description: {game.description}</p>
+                            <p className='text-wrap break-all'>Description: {game.description}</p>
                             <div className="card-actions justify-end">
                                 <button className="btn btn-primary">
                                     <Link to={`/game/update/${game._id}`}>Update</Link>
