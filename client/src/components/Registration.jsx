@@ -26,50 +26,66 @@ const Registration = (props) => {
                 setUser(res.data)
                 navigate('/home')
             })
-            .catch(error => setUserErrors(error.response.data.validationErrors))
+            .catch(error => setUserErrors(error.response.data.message))
     }
 
     return (
-        <div>
-            <form onSubmit={submitHandler}>
-                <label>
-                    Username: 
-                    <input 
-                        type="text"
-                        name='username'
-                        value={userData.username}
-                        onChange={changeHandler} 
-                    />
-                </label>
-                <label>
-                    Email: 
-                    <input 
-                        type="text"
-                        name='email'
-                        value={userData.email}
-                        onChange={changeHandler} 
-                    />
-                </label>
-                <label>
-                    Password: 
-                    <input 
-                        type="text"
-                        name='password'
-                        value={userData.password}
-                        onChange={changeHandler} 
-                    />
-                </label>
-                <label>
-                    Confirm Password: 
-                    <input 
-                        type="text"
-                        name='confirmPassword'
-                        value={userData.confirmPassword}
-                        onChange={changeHandler} 
-                    />
-                </label>
-                <input type="submit" value="Register" />
-            </form>
+        <div className="flex justify-center items-center h-screen">
+            <div className="xl:w-[700px] px-10 h-[500px] rounded-3xl xl:shadow-xl">
+                <h1 className="text-center text-3xl font-bold mt-2 mb-2">Register</h1>
+                <hr/>
+                <div className='flex justify-center mt-10'>
+                    <form onSubmit={submitHandler}> 
+                        <input 
+                            type="text"
+                            name='username'
+                            value={userData.username}
+                            onChange={changeHandler}
+                            placeholder='Username'
+                            className='py-3 p-5 rounded-md  bg-zinc-50 md:w-[500px] w-[300px] outline-yellow-400'
+                        />
+                        <p className='text-red-500'>{userErrors.username}</p>
+                        <br></br>
+                        <input 
+                            type="text"
+                            name='email'
+                            value={userData.email}
+                            onChange={changeHandler} 
+                            placeholder='Email'
+                            className='py-3 p-5 rounded-md  bg-zinc-50 md:w-[500px] w-[300px] outline-yellow-400'
+                        />
+                        
+                        <p className='text-red-500'>{userErrors.email}</p>
+                        <br></br>
+                        <input 
+                            type="text"
+                            name='password'
+                            value={userData.password}
+                            onChange={changeHandler} 
+                            placeholder='Password'
+                            className='py-3 p-5 rounded-md  bg-zinc-50 md:w-[500px] w-[300px] outline-yellow-400'
+                        />
+                        
+                        <p className='text-red-500'>{userErrors.password}</p>
+                        <br></br>
+                        <input 
+                            type="text"
+                            name='confirmPassword'
+                            value={userData.confirmPassword}
+                            onChange={changeHandler} 
+                            placeholder='Confirm Password'
+                            className='py-3 p-5 rounded-md  bg-zinc-50 md:w-[500px] w-[300px] outline-yellow-400'
+                        />
+                        
+                        <p className='text-red-500'>{userErrors.confirmPassword}</p>
+                        <br></br>
+                        <input type="submit" value="Register" className='py-3 bg-yellow-400 text-white w-full rounded-md font-bold' />
+                    </form>
+                </div>
+                <div className='class="flex justify-end mt-3 mb-4"'>
+                    <Link to={'/'}>Have an account?</Link>
+                </div>
+            </div>
         </div>
 )}
 

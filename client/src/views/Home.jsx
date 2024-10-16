@@ -25,16 +25,20 @@ const Home = (props) => {
         <div className='allContent'>
             {
                 userGames.map(game => (
-                    <div className='displayBox' key={game._id}>
-                        <h3>
-                            <Link to={`/game/${game._id}`}>{game.gameName}</Link>
-                        </h3>
-                        <p>World: {game.world}</p>
-                        <p>Description: {game.description}</p>
-                        <button>
-                            <Link to={`/game/update/${game._id}`}>Update</Link>
-                        </button>
-                        <button onClick={() => deleteGame(game._id)}>Delete</button>
+                    <div className="card bg-neutral text-neutral-content w-96 hover:scale-105 mt-3" key={game._id}>
+                        <div className="card-body items-center text-center">
+                            <h3 className="card-title">
+                                <Link to={`/game/${game._id}`}>{game.gameName}</Link>
+                            </h3>
+                            <p>World: {game.world}</p>
+                            <p>Description: {game.description}</p>
+                            <div className="card-actions justify-end">
+                                <button className="btn btn-primary">
+                                    <Link to={`/game/update/${game._id}`}>Update</Link>
+                                </button>
+                                <button className="btn btn-ghost" onClick={() => deleteGame(game._id)}>Delete</button>
+                            </div>
+                        </div>
                     </div>
                 ))
             }
