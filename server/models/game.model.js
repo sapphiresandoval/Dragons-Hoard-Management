@@ -21,7 +21,8 @@ const GameSchema = new Schema (
             ref : 'User', //the name of the model
             required : [true, 'User Id is required']
         }
-    }
+    },
+    {timestamps: true}
 )
 
 const Game = model('Game', GameSchema);

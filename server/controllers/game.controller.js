@@ -9,7 +9,7 @@ const GameController = {
             console.log(decodedToken)
             const userId = decodedToken.payload.userId
             const newGame = {... req.body, userId}
-            const game = await Game.create(req.body)
+            const game = await Game.create(newGame)
             return res.status(201).json(game)
         }catch(error){
             console.log(error)

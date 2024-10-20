@@ -19,7 +19,6 @@ const Home = (props) => {
     }
 
     const userGames = allGames.map(game => game.userId._id == user._id ? game : null).filter(game => game)
-    
 
     return (
         <div className='allContent'>
@@ -27,13 +26,13 @@ const Home = (props) => {
                 userGames.map(game => (
                     <div className="card bg-neutral text-neutral-content w-96 hover:scale-105 mt-3" key={game._id}>
                         <div className="card-body items-center text-center">
-                            <h3 className="card-title">
+                            <h3 className="card-title text-emerald-400">
                                 <Link to={`/game/${game._id}`}>{game.gameName}</Link>
                             </h3>
                             <p>World: {game.world}</p>
                             <p className='text-wrap break-all'>Description: {game.description}</p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">
+                                <button className="btn bg-emerald-400 text-black">
                                     <Link to={`/game/update/${game._id}`}>Update</Link>
                                 </button>
                                 <button className="btn btn-ghost" onClick={() => deleteGame(game._id)}>Delete</button>

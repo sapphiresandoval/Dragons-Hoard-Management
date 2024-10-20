@@ -33,7 +33,7 @@ const Login = (props) => {
     return (
         <div className="flex justify-center items-center h-screen">
             <div className="xl:w-[700px] px-10 h-[400px] rounded-3xl xl:shadow-xl">
-                <h1 className="text-center text-3xl font-bold mt-2 mb-2">Login</h1>
+                <h1 className="text-center text-3xl font-bold mt-2 mb-2 text-emerald-300">Login</h1>
                 <hr/>
                 <div className='flex justify-center mt-10'>
                     <form onSubmit={submitHandler}> 
@@ -43,21 +43,21 @@ const Login = (props) => {
                             value={userData.email}
                             onChange={changeHandler}
                             placeholder='Email'
-                            className='py-3 p-5 rounded-md  bg-zinc-50 md:w-[500px] w-[300px] outline-yellow-400'
+                            className='py-3 p-5 rounded-md  bg-zinc-50 md:w-[500px] w-[300px] outline-yellow-400 text-black'
                         />
                         <p className='text-red-500'>{userErrors.email}</p> 
                         <br></br>
                         <input 
-                            type="text" 
+                            type="password" 
                             name="password"
                             value={userData.password}
                             onChange={changeHandler}
                             placeholder='Password'
-                            className='py-3 p-5 rounded-md  bg-zinc-50 md:w-[500px] w-[300px] outline-yellow-400'
+                            className='py-3 p-5 rounded-md  bg-zinc-50 md:w-[500px] w-[300px] outline-yellow-400 text-black'
                         />
                         <p className='text-red-500'>{userErrors.password}</p>
                         <br></br>
-                        <input type="submit" value="Login" className='py-3 bg-yellow-400 text-white w-full rounded-md font-bold' />
+                        <input type="submit" value="Login" className='py-3 bg-yellow-400 text-white w-full rounded-md font-bold text-black' />
                     </form>
                 </div>
                 <div className='class="flex justify-end mt-3 mb-4"'>

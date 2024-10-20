@@ -6,6 +6,10 @@ import cookieParser from 'cookie-parser'
 //routes
 import userRouter from './routes/user.routes.js';
 import gameRouter from './routes/game.routes.js'
+import locationRouter from './routes/location.routes.js';
+import enemyRouter from './routes/enemy.routes.js'
+import bossRouter from './routes/boss.routes.js';
+import playerRouter from './routes/player.routes.js'
 
 const app = express()
 app.use(cookieParser(process.env.SECRET_KEY))
@@ -14,6 +18,10 @@ app.use(express.json(), cors({origin:'http://localhost:5173', credentials:true})
 //routes
 app.use('/api/user', userRouter)
 app.use('/api/games', gameRouter)
+app.use('/api/player', playerRouter)
+app.use('/api/enemy', enemyRouter)
+app.use('/api/boss', bossRouter)
+app.use('/api/location', locationRouter)
 
 dotenv.config()
 const PORT = process.env.PORT

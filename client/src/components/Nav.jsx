@@ -19,15 +19,15 @@ const Nav = (props) => {
     if(location.pathname == '/' || location.pathname == '/register'){
         return (
             <nav className="navbar-center">
-            <h1 className='font-bold text-3xl'>Dragon's Hoard Management</h1>
+            <h1 className='font-bold text-3xl text-yellow-500'> Dragon's Hoard Management</h1>
         </nav>
         )
     }
 
     return (
         <nav className='nav'>
-            <h1 className='font-bold text-3xl' >Dragon's Hoard Management</h1>
-            <ul className="menu menu-horizontal px-1 text-white">
+            <h1 className='font-bold text-3xl text-yellow-500' >Dragon's Hoard Management</h1>
+            <ul className="menu menu-horizontal px-1 text-emerald-300">
                 <li>
                     <Link to={'/home'}>Home</Link>
                 </li>
@@ -35,7 +35,7 @@ const Nav = (props) => {
                     <Link to={`/game/create`}>Add Game</Link>
                 </li>
                 <li>
-                    <p className='text-white' onClick={logoutUser}>Logout</p>
+                    <p className='text-emerald-300' onClick={logoutUser}>Logout</p>
                 </li>
             </ul>
         </nav>
