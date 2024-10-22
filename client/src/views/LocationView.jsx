@@ -212,7 +212,7 @@ const LocationView = (props) => {
                                     />
                                     <button className='btn btn-sm btn-circle bg-emerald-600 text-black text-xl' onClick={(e) => bossIncrease(e, boss)}>+</button>
                                 </form>
-                                <button className="btn btn-ghost btn-sm mt-3 " onClick={() => deleteboss(boss._id)}>Delete</button>
+                                <button className="btn btn-ghost btn-sm mt-3 " onClick={() => deleteBoss(boss._id)}>Delete</button>
                             </div>
                         ))
                     }
