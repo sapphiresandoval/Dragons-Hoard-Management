@@ -18,7 +18,7 @@ const PlayerView = (props) => {
 
 
     return (
-        <div className='box-content h-100 w-100 p-4  mt-3'>
+        <div className='box-content h-300 w-100 p-4  mt-3'>
             <div className='flex gap-3 justify-center items-end'>
             <h1 className="text-center text-3xl font-bold mt-2 mb-2 text-emerald-400">Players</h1>
             
@@ -31,6 +31,9 @@ const PlayerView = (props) => {
             {
                 gamePlayers.map( player => (
                     <div className="card bg-neutral text-neutral-content w-50 mt-2 " key={player._id}>
+                        <button className="btn btn-sm bg-emerald-600 mb-2">
+                            <Link className='text-black' to={`/game/${id}/player/${player._id}/update`}>Update Player</Link>
+                        </button>
                         <h3 className="text-center text-3xl font-bold mt-2 mb-2 text-emerald-600">{player.playerName}</h3>
                         <hr/>
                         <p className='mt-2 text-white'>Health: {player.health}</p>

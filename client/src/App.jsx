@@ -12,6 +12,7 @@ import LocationCreateForm from './views/LocationCreateForm'
 import EnemyCreateForm from './views/EnemyCreateForm'
 import BossCreateForm from './views/BossCreateForm'
 import LocationView from './views/LocationView'
+import PlayerUpdateForm from './views/PlayerUpdateForm'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
 
         {/* Player Routes */}
         <Route path='/game/:id/player/create' element={<PlayerCreateForm/>}/>
+        <Route path='/game/:id/player/:playerId/update' element={<PlayerUpdateForm/>}/>
 
         {/* Location Routes */}
         <Route path='/game/:id/location/create' element={<LocationCreateForm/>}/>

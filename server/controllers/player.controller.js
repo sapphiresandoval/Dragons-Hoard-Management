@@ -34,7 +34,7 @@ const PlayerController = {
     },
     //Update
     updatePlayer: async (req, res, next) => {
-        options = {
+        const options = {
             new: true,
             runValidators: true,
         }
